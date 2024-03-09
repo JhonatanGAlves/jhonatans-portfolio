@@ -4,4 +4,6 @@
 
 body {
   -webkit-font-smoothing: antialiased;
+  font-family: "Source Code Pro", monospace;
+  font-weight: 400;
 }
