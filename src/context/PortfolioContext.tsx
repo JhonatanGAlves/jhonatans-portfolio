@@ -1,4 +1,3 @@
-import { darkMode, lightMode } from "../utils/theme";
 import {
   createContext,
   ReactNode,
@@ -13,7 +12,6 @@ type ThemeTypes = "dark" | "light";
 interface PortfolioContextProps {
   theme: ThemeTypes;
   setTheme: (value: SetStateAction<ThemeTypes>) => void;
-  handleColor: (color: string) => string;
 }
 
 interface PortfolioContextProviderProps {
@@ -29,19 +27,14 @@ export default function PortfolioContextProvider({
     "dark") as ThemeTypes;
   const [theme, setTheme] = useState<ThemeTypes>(getThemeFromStorage);
 
-  function handleColor(color: string): string {
-    const mode = theme === "dark" ? darkMode : lightMode;
-    const getColor = mode[color as keyof typeof mode];
-
-    return getColor;
-  }
-
   function handleThemeChange(theme: ThemeTypes) {
     if (theme === "dark") {
+      document.documentElement.classList.toggle("dark");
       localStorage.setItem("theme", "dark");
-    } else {
-      localStorage.setItem("theme", "light");
+      return;
     }
+    document.documentElement.classList.remove("dark");
+    localStorage.setItem("theme", "light");
   }
 
   useEffect(() => {
@@ -52,7 +45,6 @@ export default function PortfolioContextProvider({
     return {
       theme,
       setTheme,
-      handleColor,
     };
   }, [theme]);
 
