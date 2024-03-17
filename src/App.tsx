@@ -1,3 +1,9 @@
+import { Header } from "./components/header/Header";
+
 export const App = () => {
-  return <h1>Hello World</h1>;
+  return (
+    <div className="bg-[var(--gray-800)] dark:bg-[var(--dark-gray-800)]">
+      <Header />
+    </div>
+  );
 };
