@@ -48,7 +48,7 @@ export const NavBar = ({ theme }: NavBarProps) => {
     <nav>
       <ul className={`flex items-center gap-5`}>
         {navBarItemsData.map((item) => (
-          <div className={`flex flex-col items-center gap-1`}>
+          <div key={item.name} className={`flex flex-col items-center gap-1`}>
             <div className={`flex flex-col items-center`}>
               <span
                 className={`py-0.5 px-2 ${getColorOfSelectedItem(
@@ -67,7 +67,6 @@ export const NavBar = ({ theme }: NavBarProps) => {
               className={`w-14 h-14 ${getColorOfSelectedItem(
                 item.name
               )} flex  rounded-full`}
-              key={item.name}
               href={`#${item.name}`}
               onClick={() => setSelectedNav(item.name)}
             >
