@@ -1,11 +1,11 @@
-import { useContext } from "react";
-
 import useFlag from "../../../../hooks/useFlag";
-import { PortfolioContext } from "../../../../context/PortfolioContext";
 import { useI18n } from "../../../../hooks/useI18n";
 
-export default function SwitchLanguage() {
-  const { theme } = useContext(PortfolioContext);
+interface SwitchLanguageProps {
+  theme: "dark" | "light";
+}
+
+export default function SwitchLanguage({ theme }: SwitchLanguageProps) {
   const { language, setLanguage, i18n } = useI18n();
   const { flag } = useFlag(language, theme);
 

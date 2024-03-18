@@ -1,5 +1,10 @@
 export const en_us = {
   translation: {
-    "Welcome to React": "Welcome to React and react",
+    home: "Home",
+    projects: "Projects",
+    education: "Education",
+    contact: "Contact",
+    dark: "Dark",
+    light: "Light",
   },
 };
