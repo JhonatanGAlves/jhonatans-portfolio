@@ -16,13 +16,15 @@ interface NavBarProps {
 
 export const NavBar = ({ theme }: NavBarProps) => {
   const [selectedNav, setSelectedNav] = useState("home");
+  const [currentHover, setCurrentHover] = useState("");
   const { i18n } = useI18n();
+
   function getColorOfSelectedItem(nameItem: string): string {
     return selectedNav === nameItem
       ? "text-[var(--gray-800)] dark:text-[var(--dark-gray-800)] bg-[var(--detail)] dark:bg-[var(--dark-detail)]"
       : `text-[var(--gray-${
           theme === "dark" ? "500" : "800"
-        })] bg-[var(--gray-800)] dark:bg-[var(--dark-gray-800)]`;
+        })] bg-[var(--gray-500)] dark:bg-[var(--dark-gray-800)]`;
   }
 
   const navBarItemsData = [
@@ -48,8 +50,17 @@ export const NavBar = ({ theme }: NavBarProps) => {
     <nav>
       <ul className={`flex items-center gap-5`}>
         {navBarItemsData.map((item) => (
-          <div key={item.name} className={`flex flex-col items-center gap-1`}>
-            <div className={`flex flex-col items-center`}>
+          <div
+            key={item.name}
+            className={`flex flex-col items-center gap-1`}
+            onMouseEnter={() => setCurrentHover(item.name)}
+            onMouseLeave={() => setCurrentHover("")}
+          >
+            <div
+              className={`flex flex-col items-center ${
+                selectedNav === item.name ? "h-fit" : "h-8"
+              }`}
+            >
               <span
                 className={`py-0.5 px-2 ${getColorOfSelectedItem(
                   item.name
@@ -58,9 +69,11 @@ export const NavBar = ({ theme }: NavBarProps) => {
                 {i18n(item.name)}
               </span>
               <div
-                className={`-mt-1 w-2 h-2 rotate-45 ${getColorOfSelectedItem(
-                  item.name
-                )}`}
+                className={`${
+                  selectedNav === item.name || currentHover === item.name
+                    ? "-mt-1"
+                    : "hidden"
+                } w-2 h-2 rotate-45 ${getColorOfSelectedItem(item.name)}`}
               />
             </div>
             <a
