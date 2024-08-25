@@ -1,16 +1,17 @@
 import { useContext, useEffect, useState } from "react";
 
-import { NavBar } from "./navbar/NavBar";
-import SwitchLanguage from "./switches/languages/SwitchLanguage";
-import { PortfolioContext } from "../../context/PortfolioContext";
-import { SwitchTheme } from "./switches/themes/SwitchTheme";
-import { SandwichMenu } from "./mobile/SandwichMenu";
 import {
   faCode,
   faGraduationCap,
   faHouse,
   faPaperPlane,
 } from "@fortawesome/free-solid-svg-icons";
+
+import { NavBar } from "./navbar/NavBar";
+import SwitchLanguage from "./switches/languages/SwitchLanguage";
+import { PortfolioContext } from "../../context/PortfolioContext";
+import { SwitchTheme } from "./switches/themes/SwitchTheme";
+import { SandwichMenu } from "./mobile/SandwichMenu";
 
 export const Header = () => {
   const { theme, setTheme } = useContext(PortfolioContext);

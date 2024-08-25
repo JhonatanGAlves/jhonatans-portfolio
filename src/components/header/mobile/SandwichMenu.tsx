@@ -20,7 +20,7 @@ export const SandwichMenu = ({
   theme,
   setTheme,
 }: SandwichMenuProps) => {
-  const { i18n, language } = useI18n();
+  const { i18n } = useI18n();
 
   return (
     <DropdownMenu.Root>
@@ -30,7 +30,7 @@ export const SandwichMenu = ({
           icon={faBars}
         />
       </DropdownMenu.Trigger>
-      <DropdownMenu.Content className="absolute top-0 -right-[15px] w-44 p-4 rounded capitalize text-[var(--gray-100)] dark:text-[var(--dark-gray-100)] bg-[var(--gray-600)] dark:bg-[var(--dark-gray-800)]">
+      <DropdownMenu.Content className="absolute top-0 -right-[15px] w-44 p-4 rounded capitalize text-[var(--gray-100)] dark:text-[var(--dark-gray-100)] bg-[var(--gray-600)] dark:bg-[var(--dark-gray-800)] shadow-lg">
         {navBarItemsData.map((item, index) => (
           <a key={index} href={item.name}>
             <DropdownMenu.Item className="outline-none font-medium hover:cursor-pointer hover:text-[var(--detail)] hover:dark:text-[var(--dark-detail)]">
