@@ -3,9 +3,13 @@ import { useI18n } from "../../../../hooks/useI18n";
 
 interface SwitchLanguageProps {
   theme: "dark" | "light";
+  isMobileMenu?: boolean;
 }
 
-export default function SwitchLanguage({ theme }: SwitchLanguageProps) {
+export default function SwitchLanguage({
+  theme,
+  isMobileMenu,
+}: SwitchLanguageProps) {
   const { language, setLanguage, i18n } = useI18n();
   const { flag } = useFlag(language, theme);
 
@@ -14,8 +18,8 @@ export default function SwitchLanguage({ theme }: SwitchLanguageProps) {
       <img
         src={flag}
         alt="Image flag from language mode"
-        width={40}
-        height={40}
+        width={isMobileMenu ? 20 : 40}
+        height={isMobileMenu ? 20 : 40}
       />
       <div className={`flex items-center gap-2 h-full`}>
         <button

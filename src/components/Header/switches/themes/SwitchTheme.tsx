@@ -8,20 +8,35 @@ import { useI18n } from "../../../../hooks/useI18n";
 interface SwitchThemeProps {
   theme: "dark" | "light";
   setTheme: (value: SetStateAction<"dark" | "light">) => void;
+  iconPosition?: "left" | "right";
+  isMobileMenu?: boolean;
 }
 
-export const SwitchTheme = ({ theme, setTheme }: SwitchThemeProps) => {
+export const SwitchTheme = ({
+  theme,
+  setTheme,
+  iconPosition = "right",
+  isMobileMenu,
+}: SwitchThemeProps) => {
   const { i18n } = useI18n();
 
   return (
-    <div className={`flex items-center gap-3`}>
+    <div className={`flex items-center gap-3 ${isMobileMenu ? "mt-1" : ""}`}>
       <div className={`flex items-center gap-2 h-full`}>
+        {iconPosition === "left" && (
+          <FontAwesomeIcon
+            className={`text-[var(--detail)] dark:text-[var(--dark-detail)] ${
+              isMobileMenu ? "text-xl" : "text-[2.125rem]"
+            }`}
+            icon={theme === "dark" ? faMoon : faSun}
+          />
+        )}
         <button
           className={`${
             theme === "dark"
               ? "text-[var(--detail)] dark:text-[var(--dark-detail)]"
               : "text-[var(--gray-100)] dark:text-[var(--dark-gray-100)] hover:text-[var(--gray-200)] hover:dark:text-[var(--dark-gray-200)]"
-          } transition-all`}
+          } ${iconPosition === "left" ? "ml-[10px]" : ""} transition-all`}
           onClick={() => setTheme("dark")}
         >
           {i18n("dark")}
@@ -38,10 +53,14 @@ export const SwitchTheme = ({ theme, setTheme }: SwitchThemeProps) => {
           {i18n("light")}
         </button>
       </div>
-      <FontAwesomeIcon
-        className={`text-[var(--detail)] dark:text-[var(--dark-detail)] text-[2.125rem]`}
-        icon={theme === "dark" ? faMoon : faSun}
-      />
+      {iconPosition === "right" && (
+        <FontAwesomeIcon
+          className={`text-[var(--detail)] dark:text-[var(--dark-detail)] ${
+            isMobileMenu ? "text-xl" : "text-[2.125rem]"
+          }`}
+          icon={theme === "dark" ? faMoon : faSun}
+        />
+      )}
     </div>
   );
 };

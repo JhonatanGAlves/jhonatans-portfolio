@@ -1,50 +1,24 @@
 import { useState } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCode,
-  faGraduationCap,
-  faHouse,
-  faPaperPlane,
-} from "@fortawesome/free-solid-svg-icons";
+import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 
 import { useI18n } from "../../../hooks/useI18n";
 
 interface NavBarProps {
-  theme: "dark" | "light";
   scrollPosition: number;
+  navBarItemsData: { name: string; icon: IconDefinition }[];
 }
 
-export const NavBar = ({ theme, scrollPosition }: NavBarProps) => {
+export const NavBar = ({ scrollPosition, navBarItemsData }: NavBarProps) => {
   const [selectedNav, setSelectedNav] = useState("home");
   const [currentHover, setCurrentHover] = useState("");
   const { i18n } = useI18n();
 
-  const navBarItemsData = [
-    {
-      name: "home",
-      icon: faHouse,
-    },
-    {
-      name: "projects",
-      icon: faCode,
-    },
-    {
-      name: "education",
-      icon: faGraduationCap,
-    },
-    {
-      name: "contact",
-      icon: faPaperPlane,
-    },
-  ];
-
   function getColorOfSelectedItem(nameItem: string): string {
     return selectedNav === nameItem
       ? "text-[var(--gray-800)] dark:text-[var(--dark-gray-800)] bg-[var(--detail)] dark:bg-[var(--dark-detail)]"
-      : `text-[var(--gray-${
-          theme === "dark" ? "500" : "800"
-        })] bg-[var(--gray-500)] dark:bg-[var(--dark-gray-800)]`;
+      : "text-[var(--dark-gray-100)] dark:text-[var(--dark-gray-100)] bg-[var(--gray-500)] dark:bg-[var(--dark-gray-800)]";
   }
 
   return (
@@ -92,11 +66,7 @@ export const NavBar = ({ theme, scrollPosition }: NavBarProps) => {
             >
               <li className="m-auto">
                 <FontAwesomeIcon
-                  className={`${
-                    selectedNav === item.name
-                      ? "text-[var(--gray-800)] dark:text-[var(--dark-gray-800)]"
-                      : `text-[var(--gray-${theme === "dark" ? "500" : "800"})]`
-                  }`}
+                  className={getColorOfSelectedItem(item.name)}
                   icon={item.icon}
                   size="xl"
                 />
