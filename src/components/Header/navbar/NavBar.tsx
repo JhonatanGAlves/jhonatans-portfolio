@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
+import { Flex } from "@radix-ui/themes";
 
 import { useI18n } from "../../../hooks/useI18n";
 
@@ -25,18 +26,21 @@ export const NavBar = ({ scrollPosition, navBarItemsData }: NavBarProps) => {
     <nav>
       <ul className={`flex items-center gap-5`}>
         {navBarItemsData.map((item) => (
-          <div
+          <Flex
+            direction="column"
+            align="center"
+            gap="4px"
             key={item.name}
             className={`${
               scrollPosition > 0 ? "hover:opacity-85" : ""
-            } flex flex-col items-center gap-1 transition-all`}
+            }transition-all`}
             onMouseEnter={() => setCurrentHover(item.name)}
             onMouseLeave={() => setCurrentHover("")}
           >
-            <div
-              className={`${
-                scrollPosition > 0 ? "hidden opacity-0" : ""
-              } flex flex-col items-center ${
+            <Flex
+              direction="column"
+              align="center"
+              className={`${scrollPosition > 0 ? "hidden opacity-0" : ""} ${
                 selectedNav === item.name ? "h-fit" : "h-8"
               }`}
             >
@@ -56,7 +60,7 @@ export const NavBar = ({ scrollPosition, navBarItemsData }: NavBarProps) => {
                   item.name
                 )} transition-all`}
               />
-            </div>
+            </Flex>
             <a
               className={`w-14 h-14 ${getColorOfSelectedItem(
                 item.name
@@ -72,7 +76,7 @@ export const NavBar = ({ scrollPosition, navBarItemsData }: NavBarProps) => {
                 />
               </li>
             </a>
-          </div>
+          </Flex>
         ))}
       </ul>
     </nav>

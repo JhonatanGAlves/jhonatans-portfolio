@@ -7,6 +7,8 @@ import {
   useEffect,
 } from "react";
 
+import { Theme } from "@radix-ui/themes";
+
 type ThemeTypes = "dark" | "light";
 
 interface PortfolioContextProps {
@@ -50,7 +52,7 @@ export default function PortfolioContextProvider({
 
   return (
     <PortfolioContext.Provider value={values}>
-      {children}
+      <Theme appearance={theme}>{children}</Theme>
     </PortfolioContext.Provider>
   );
 }

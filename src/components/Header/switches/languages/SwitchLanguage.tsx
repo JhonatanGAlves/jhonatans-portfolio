@@ -1,3 +1,5 @@
+import { Flex } from "@radix-ui/themes";
+
 import useFlag from "../../../../hooks/useFlag";
 import { useI18n } from "../../../../hooks/useI18n";
 
@@ -14,14 +16,14 @@ export default function SwitchLanguage({
   const { flag } = useFlag(language, theme);
 
   return (
-    <div className={`flex items-center gap-3`}>
+    <Flex align="center" gap="12px">
       <img
         src={flag}
         alt="Image flag from language mode"
         width={isMobileMenu ? 20 : 40}
         height={isMobileMenu ? 20 : 40}
       />
-      <div className={`flex items-center gap-2 h-full`}>
+      <Flex align="center" gap="8px" className={`h-full`}>
         <button
           className={`${
             language === "en_us"
@@ -43,7 +45,7 @@ export default function SwitchLanguage({
         >
           pt
         </button>
-      </div>
-    </div>
+      </Flex>
+    </Flex>
   );
 }

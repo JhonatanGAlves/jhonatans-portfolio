@@ -2,6 +2,7 @@ import { SetStateAction } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
+import { Flex } from "@radix-ui/themes";
 
 import { useI18n } from "../../../../hooks/useI18n";
 
@@ -21,8 +22,8 @@ export const SwitchTheme = ({
   const { i18n } = useI18n();
 
   return (
-    <div className={`flex items-center gap-3 ${isMobileMenu ? "mt-1" : ""}`}>
-      <div className={`flex items-center gap-2 h-full`}>
+    <Flex align="center" gap="12px" className={`${isMobileMenu ? "mt-1" : ""}`}>
+      <Flex align="center" gap="8px" className={`h-full`}>
         {iconPosition === "left" && (
           <FontAwesomeIcon
             className={`text-[var(--detail)] dark:text-[var(--dark-detail)] ${
@@ -52,7 +53,7 @@ export const SwitchTheme = ({
         >
           {i18n("light")}
         </button>
-      </div>
+      </Flex>
       {iconPosition === "right" && (
         <FontAwesomeIcon
           className={`text-[var(--detail)] dark:text-[var(--dark-detail)] ${
@@ -61,6 +62,6 @@ export const SwitchTheme = ({
           icon={theme === "dark" ? faMoon : faSun}
         />
       )}
-    </div>
+    </Flex>
   );
 };
