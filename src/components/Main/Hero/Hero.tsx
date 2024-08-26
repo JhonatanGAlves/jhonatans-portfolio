@@ -118,6 +118,9 @@ export const Hero = ({ scrollPosition, modeDevice }: HeroProps) => {
               ))}
           </Flex>
           <Link
+            className={`mt-6 w-72 ${
+              isDesktopDevice ? "self-start" : "self-center"
+            }`}
             href={resume}
             download="Resume - Jhonatan Alves"
             target="_blank"
@@ -127,9 +130,7 @@ export const Hero = ({ scrollPosition, modeDevice }: HeroProps) => {
               color={theme === "dark" ? "yellow" : "purple"}
               size="3"
               radius="medium"
-              className={`mt-6 w-72 ${
-                isDesktopDevice ? "self-start" : "self-center"
-              } text-[var(--detail)] dark:text-[var(--dark-detail)] cursor-pointer`}
+              className={`w-full text-[var(--detail)] dark:text-[var(--dark-detail)] cursor-pointer`}
             >
               <FaFileDownload /> {`${i18n("Download")} CV`}
             </Button>
