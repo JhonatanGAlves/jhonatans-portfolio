@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
-import { Flex } from "@radix-ui/themes";
+import { Flex, Link, Text } from "@radix-ui/themes";
 
 import { useI18n } from "../../../hooks/useI18n";
 
@@ -44,13 +44,14 @@ export const NavBar = ({ scrollPosition, navBarItemsData }: NavBarProps) => {
                 selectedNav === item.name ? "h-fit" : "h-8"
               }`}
             >
-              <span
+              <Text
                 className={`py-0.5 px-2 ${getColorOfSelectedItem(
                   item.name
                 )} rounded z-10`}
+                as="span"
               >
                 {i18n(item.name)}
-              </span>
+              </Text>
               <div
                 className={`${
                   selectedNav === item.name || currentHover === item.name
@@ -61,12 +62,13 @@ export const NavBar = ({ scrollPosition, navBarItemsData }: NavBarProps) => {
                 )} transition-all`}
               />
             </Flex>
-            <a
+            <Link
               className={`w-14 h-14 ${getColorOfSelectedItem(
                 item.name
               )} flex  rounded-full`}
               href={`#${item.name}`}
               onClick={() => setSelectedNav(item.name)}
+              underline="none"
             >
               <li className="m-auto">
                 <FontAwesomeIcon
@@ -75,7 +77,7 @@ export const NavBar = ({ scrollPosition, navBarItemsData }: NavBarProps) => {
                   size="xl"
                 />
               </li>
-            </a>
+            </Link>
           </Flex>
         ))}
       </ul>
