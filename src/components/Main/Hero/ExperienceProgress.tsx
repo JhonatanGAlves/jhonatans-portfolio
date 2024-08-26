@@ -29,7 +29,7 @@ export const ExperienceProgress = ({
   const { i18n } = useI18n();
 
   useEffect(() => {
-    let timerId = undefined;
+    let timerId: number | undefined = undefined;
 
     if (experienceAndWidth) {
       timerId = setTimeout(
