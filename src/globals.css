@@ -21,10 +21,3 @@
   --detail: #8257e5;
   --dark-detail: #ffa800;
 }
-
-body {
-  -webkit-font-smoothing: antialiased;
-  font-family: "Source Code Pro", monospace;
-  font-size: 1rem;
-  font-weight: 400;
-}

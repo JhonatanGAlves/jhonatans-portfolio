@@ -3,8 +3,8 @@ import { SetStateAction } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconDefinition, faBars } from "@fortawesome/free-solid-svg-icons";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
+import { Link } from "@radix-ui/themes";
 
-import useFlag from "../../../hooks/useFlag";
 import { useI18n } from "../../../hooks/useI18n";
 import SwitchLanguage from "../switches/languages/SwitchLanguage";
 import { SwitchTheme } from "../switches/themes/SwitchTheme";
@@ -30,13 +30,18 @@ export const SandwichMenu = ({
           icon={faBars}
         />
       </DropdownMenu.Trigger>
-      <DropdownMenu.Content className="absolute top-0 -right-[15px] w-44 p-4 rounded capitalize text-[var(--gray-100)] dark:text-[var(--dark-gray-100)] bg-[var(--gray-600)] dark:bg-[var(--dark-gray-800)] shadow-lg">
+      <DropdownMenu.Content className="absolute top-0 -right-[15px] w-44 p-4 rounded capitalize bg-[var(--gray-600)] dark:bg-[var(--dark-gray-800)] shadow-lg">
         {navBarItemsData.map((item, index) => (
-          <a key={index} href={item.name}>
+          <Link
+            key={index}
+            href={item.name}
+            underline="none"
+            className="text-[var(--gray-100)] dark:text-[var(--dark-gray-100)]"
+          >
             <DropdownMenu.Item className="outline-none font-medium hover:cursor-pointer hover:text-[var(--detail)] hover:dark:text-[var(--dark-detail)]">
               {i18n(item.name)}
             </DropdownMenu.Item>
-          </a>
+          </Link>
         ))}
         <div className="h-px my-3 bg-[var(--gray-500)] dark:bg-[var(--dark-gray-500)]" />
         <SwitchLanguage theme={theme} isMobileMenu />
