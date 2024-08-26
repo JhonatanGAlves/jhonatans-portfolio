@@ -9,6 +9,7 @@ import lightBanner from "../../../assets/hero/banner-light-portfolio.svg";
 import { PortfolioContext } from "../../../context/PortfolioContext";
 import { ExperienceProgress } from "./ExperienceProgress";
 import { mainExperiences, socialMedia } from "../../../constants/constants";
+import resume from "../../../assets/jhonatan-alves-cv.pdf";
 
 interface HeroProps {
   scrollPosition: number;
@@ -116,6 +117,23 @@ export const Hero = ({ scrollPosition, modeDevice }: HeroProps) => {
                 />
               ))}
           </Flex>
+          <Link
+            href={resume}
+            download="Resume - Jhonatan Alves"
+            target="_blank"
+          >
+            <Button
+              variant="outline"
+              color={theme === "dark" ? "yellow" : "purple"}
+              size="3"
+              radius="medium"
+              className={`mt-6 w-72 ${
+                isDesktopDevice ? "self-start" : "self-center"
+              } text-[var(--detail)] dark:text-[var(--dark-detail)] cursor-pointer`}
+            >
+              <FaFileDownload /> {`${i18n("Download")} CV`}
+            </Button>
+          </Link>
         </Flex>
       </Flex>
       {isDesktopDevice && (
