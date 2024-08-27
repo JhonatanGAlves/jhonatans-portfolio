@@ -41,7 +41,7 @@ export const Header = ({ scrollPosition, modeDevice }: HeaderProps) => {
   ];
 
   return (
-    <div className={`w-full fixed top-0`}>
+    <div className={`w-full fixed top-0 z-10`}>
       <header
         className={`flex ${
           modeDevice === "DESKTOP"

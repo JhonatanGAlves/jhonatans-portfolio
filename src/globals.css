@@ -21,3 +21,21 @@
   --detail: #8257e5;
   --dark-detail: #ffa800;
 }
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+}
+
+.radix-themes {
+  --default-font-family: "Source Code Pro", monospace;
+}
+
+.dark {
+  --yellow-a11: #ffa800;
+}
+
+.light {
+  --purple-a11: #8257e5;
+}

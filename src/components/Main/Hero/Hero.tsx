@@ -25,6 +25,7 @@ export const Hero = ({ scrollPosition, modeDevice }: HeroProps) => {
 
   return (
     <Flex
+      id="home"
       direction={isDesktopDevice ? "row" : "column"}
       justify={isDesktopDevice ? "between" : "center"}
       align="center"
@@ -130,7 +131,7 @@ export const Hero = ({ scrollPosition, modeDevice }: HeroProps) => {
               color={theme === "dark" ? "yellow" : "purple"}
               size="3"
               radius="medium"
-              className={`w-full text-[var(--detail)] dark:text-[var(--dark-detail)] cursor-pointer`}
+              className={`w-full cursor-pointer`}
             >
               <FaFileDownload /> {`${i18n("Download")} CV`}
             </Button>

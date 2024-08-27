@@ -34,7 +34,7 @@ export const SandwichMenu = ({
         {navBarItemsData.map((item, index) => (
           <Link
             key={index}
-            href={item.name}
+            href={`#${item.name}`}
             underline="none"
             className="text-[var(--gray-100)] dark:text-[var(--dark-gray-100)]"
           >

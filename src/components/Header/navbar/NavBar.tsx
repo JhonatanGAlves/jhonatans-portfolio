@@ -32,8 +32,8 @@ export const NavBar = ({ scrollPosition, navBarItemsData }: NavBarProps) => {
             gap="4px"
             key={item.name}
             className={`${
-              scrollPosition > 0 ? "hover:opacity-85" : ""
-            }transition-all`}
+              scrollPosition > 0 ? "hover:opacity-75" : ""
+            } transition-all`}
             onMouseEnter={() => setCurrentHover(item.name)}
             onMouseLeave={() => setCurrentHover("")}
           >
@@ -65,7 +65,7 @@ export const NavBar = ({ scrollPosition, navBarItemsData }: NavBarProps) => {
             <Link
               className={`w-14 h-14 ${getColorOfSelectedItem(
                 item.name
-              )} flex  rounded-full`}
+              )} flex rounded-full`}
               href={`#${item.name}`}
               onClick={() => setSelectedNav(item.name)}
               underline="none"
