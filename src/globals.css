@@ -20,6 +20,15 @@
   --dark-bg-linear-2: #000000;
   --detail: #8257e5;
   --dark-detail: #ffa800;
+
+  --ts-color: #007acc;
+  --js-color: #f1e05a;
+  --html-color: #e34c26;
+  --css-color: #563d7c;
+  --scss-color: #c6538c;
+  --php-color: #4f5d95;
+  --react-color: #58c4dc;
+  --node-color: #417e38;
 }
 
 @layer base {
