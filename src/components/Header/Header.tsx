@@ -31,7 +31,7 @@ export const Header = ({ scrollPosition, modeDevice }: HeaderProps) => {
       icon: faCode,
     },
     {
-      name: "education",
+      name: "experiences",
       icon: faGraduationCap,
     },
     {

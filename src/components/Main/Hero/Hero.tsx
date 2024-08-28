@@ -8,7 +8,7 @@ import darkBanner from "../../../assets/hero/banner-dark-portfolio.svg";
 import lightBanner from "../../../assets/hero/banner-light-portfolio.svg";
 import { PortfolioContext } from "../../../context/PortfolioContext";
 import { ExperienceProgress } from "./ExperienceProgress";
-import { mainExperiences, socialMedia } from "../../../constants/constants";
+import { mainExperiences, socialMedia } from "../../../constants/background";
 import resume from "../../../assets/jhonatan-alves-cv.pdf";
 
 interface HeroProps {

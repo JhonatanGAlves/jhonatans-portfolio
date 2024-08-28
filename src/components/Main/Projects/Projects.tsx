@@ -28,6 +28,7 @@ export const Projects = () => {
       <Flex direction="column" align="center" gap="8px">
         <Heading
           as="h1"
+          align="center"
           size="8"
           className="text-[var(--detail)] dark:text-[var(--dark-detail)]"
         >
