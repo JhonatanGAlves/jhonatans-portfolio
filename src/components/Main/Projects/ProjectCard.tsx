@@ -59,7 +59,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
                     key={index}
                     variant="surface"
                     color={borderColor}
-                    className={`${color}`}
+                    className={`${color} select-none`}
                   >
                     {tool === "React" && <FaReact />}
                     {tool === "Node" && <FaNodeJs />}

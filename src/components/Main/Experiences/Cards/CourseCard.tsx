@@ -48,7 +48,7 @@ export const CourseCard = ({
               <FaCheckCircle />
             ) : (
               <Spinner loading={!isUndergraduate}>
-                <FaGraduationCap />
+                <FaGraduationCap className="text-[var(--gray-100)]" />
               </Spinner>
             )}
           </Flex>
@@ -65,6 +65,7 @@ export const CourseCard = ({
                   ? "yellow"
                   : "purple"
               }
+              className="select-none"
             >
               {i18n(course.type as string)}
             </Badge>

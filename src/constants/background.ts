@@ -80,7 +80,7 @@ export const jobExperiences: JobTypes[] = [
   {
     period: {
       start: "2021/01/05",
-      end: "2022/08/27",
+      end: "2021/08/27",
     },
     companyName: "Eleven Up",
     role: "Web Developer",
