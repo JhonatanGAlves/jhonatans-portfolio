@@ -1,6 +1,15 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 
-import { Flex, Grid, Heading, Separator, Text } from "@radix-ui/themes";
+import {
+  Box,
+  Button,
+  Flex,
+  Grid,
+  Heading,
+  Separator,
+  Text,
+} from "@radix-ui/themes";
+import { FaPlus } from "react-icons/fa";
 
 import { useI18n } from "../../../hooks/useI18n";
 import {
@@ -14,13 +23,31 @@ import { CourseCard } from "./Cards/CourseCard";
 
 interface ExperiencesProps {
   modeDevice: "DESKTOP" | "MOBILE";
+  currentScreenWidth: number;
 }
 
-export const Experiences = ({ modeDevice }: ExperiencesProps) => {
+export const Experiences = ({
+  modeDevice,
+  currentScreenWidth,
+}: ExperiencesProps) => {
+  const [isShowingAllCredentials, setIsShowingAllCredentials] = useState(false);
+  const [filteredAllCertifications, setFilteredAllCertifications] = useState<
+    CourseTypes[]
+  >([]);
   const { i18n } = useI18n();
   const { theme } = useContext(PortfolioContext);
 
   const isDesktopDevice = modeDevice === "DESKTOP";
+
+  useEffect(() => {
+    const sliceLimitDefault =
+      currentScreenWidth > 1279 ? 9 : isDesktopDevice ? 6 : 5;
+    const newSliceLimit = isShowingAllCredentials
+      ? allCertifications.length - 1
+      : sliceLimitDefault;
+
+    setFilteredAllCertifications(allCertifications.slice(0, newSliceLimit));
+  }, [isShowingAllCredentials, currentScreenWidth]);
 
   return (
     <Flex
@@ -78,8 +105,13 @@ export const Experiences = ({ modeDevice }: ExperiencesProps) => {
           size="2"
           className="h-2 m-8 rounded bg-[var(--detail)] dark:bg-[var(--dark-detail)]"
         />
-        <Grid columns={{ initial: "1", sm: "2", lg: "3" }} gap="4" width="auto">
-          {allCertifications.map((course, index) => (
+        <Grid
+          position="relative"
+          columns={{ initial: "1", sm: "2", lg: "3" }}
+          gap="4"
+          width="auto"
+        >
+          {filteredAllCertifications.map((course, index) => (
             <CourseCard
               key={index}
               course={course}
@@ -88,7 +120,27 @@ export const Experiences = ({ modeDevice }: ExperiencesProps) => {
               onlyCertificateSection
             />
           ))}
+          <Box
+            hidden={isShowingAllCredentials}
+            width="100%"
+            height="150px"
+            className="rounded-lg bg-gradient-to-t from-[var(--bg-linear-1)] dark:from-[var(--dark-bg-linear-1)]"
+            position="absolute"
+            bottom="0"
+          />
         </Grid>
+        <Button
+          mt="2"
+          hidden={isShowingAllCredentials}
+          variant="outline"
+          color={theme === "dark" ? "yellow" : "purple"}
+          size="3"
+          radius="medium"
+          className={`cursor-pointer`}
+          onClick={() => setIsShowingAllCredentials(true)}
+        >
+          <FaPlus /> {i18n("Show More Credentials")}
+        </Button>
       </Flex>
     </Flex>
   );
