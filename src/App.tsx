@@ -1,4 +1,4 @@
-import { Header, Main } from "./components/index";
+import { Footer, Header, Main } from "./components/index";
 import { useScreenStatus } from "./hooks/useScreenStatus";
 
 export const App = () => {
@@ -12,6 +12,7 @@ export const App = () => {
         modeDevice={modeDevice}
         currentScreenWidth={currentScreenWidth}
       />
+      <Footer />
     </div>
   );
 };
