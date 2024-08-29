@@ -93,7 +93,7 @@ export const Contact = ({ modeDevice }: ContactProps) => {
       isValid = false;
     }
 
-    if (formData.message && formData.message.length < 7) {
+    if (formData.message && formData.message.length < 6) {
       toast.error(i18n("Message must have at least 6 characters."));
       isValid = false;
     }
@@ -190,7 +190,9 @@ export const Contact = ({ modeDevice }: ContactProps) => {
               size="3"
               radius="medium"
               className={`w-full ${
-                !isFieldValid ? "cursor-not-allowed" : "cursor-pointer"
+                !isFieldValid || isSendingMessage
+                  ? "cursor-not-allowed"
+                  : "cursor-pointer"
               }`}
               type="submit"
               disabled={!isFieldValid || isSendingMessage}
