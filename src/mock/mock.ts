@@ -27,7 +27,7 @@ export const MY_PROJECTS: ProjectsTypes[] = [
     name: "Jhonatan's Portfolio",
     description: "Description",
     url: "https://github.com/JhonatanGAlves/jhonatans-portfolio",
-    createdAt: "2024-03-04T22:59:01Z",
+    productionUrl: "https://jhonatandev-alves-app.vercel.app/",
     tools: {
       TypeScript: {
         percentage: 95.0,
@@ -60,7 +60,7 @@ export const MY_PROJECTS: ProjectsTypes[] = [
     name: "Phone Book App",
     description: "A FullStack App.",
     url: "https://github.com/JhonatanGAlves/phone-book-app",
-    createdAt: "2024-08-15T22:46:29Z",
+    productionUrl: "",
     tools: {
       TypeScript: {
         percentage: 55.2,
@@ -97,7 +97,7 @@ export const MY_PROJECTS: ProjectsTypes[] = [
     name: "Coffee Delivery",
     description: "Description",
     url: "https://github.com/JhonatanGAlves/coffee-delivery",
-    createdAt: "2023-11-07T11:15:02Z",
+    productionUrl: "https://coffee-delivery-rose.vercel.app/",
     tools: {
       TypeScript: {
         percentage: 97.6,
@@ -130,7 +130,7 @@ export const MY_PROJECTS: ProjectsTypes[] = [
     name: "Capputeeno E-commerce",
     description: "Description",
     url: "https://github.com/JhonatanGAlves/capputeeno-e-commerce",
-    createdAt: "2023-11-20T20:41:07Z",
+    productionUrl: "",
     tools: {
       TypeScript: {
         percentage: 90.4,
@@ -164,7 +164,7 @@ export const MY_PROJECTS: ProjectsTypes[] = [
     description:
       "This is a financial control application built on the Ignite course by @Rocketseat using the following tecs: React, TypeScript, miragejs for fake API, axios for requesting API and Styled Components for CSS in JS.",
     url: "https://github.com/JhonatanGAlves/dtmoney-financial-control",
-    createdAt: "2022-04-28T13:31:26Z",
+    productionUrl: "",
     tools: {
       TypeScript: {
         percentage: 96.4,
@@ -189,7 +189,7 @@ export const MY_PROJECTS: ProjectsTypes[] = [
     name: "Todo List",
     description: "Description",
     url: "https://github.com/JhonatanGAlves/todo-list",
-    createdAt: "2023-11-02T17:16:03Z",
+    productionUrl: "https://todo-list-seven-hazel.vercel.app/",
     tools: {
       TypeScript: {
         percentage: 88.4,
@@ -222,7 +222,7 @@ export const MY_PROJECTS: ProjectsTypes[] = [
     name: "Github Tasks Blog",
     description: "Description",
     url: "https://github.com/JhonatanGAlves/github-tasks-blog",
-    createdAt: "2023-11-16T11:30:51Z",
+    productionUrl: "https://github-tasks-blog.vercel.app/",
     tools: {
       TypeScript: {
         percentage: 92.5,
@@ -251,7 +251,7 @@ export const MY_PROJECTS: ProjectsTypes[] = [
     name: "Form Progress Bar",
     description: "Description",
     url: "https://github.com/JhonatanGAlves/form-with-progress-bar",
-    createdAt: "2023-02-05T17:18:14Z",
+    productionUrl: "",
     tools: {
       TypeScript: {
         percentage: 96.7,
@@ -277,7 +277,7 @@ export const MY_PROJECTS: ProjectsTypes[] = [
     description:
       "Login Form is a small application that simulates a login system that triggers a Promise function simulating a request. I came across a video on Youtube that contained this challenge -> https://www.youtube.com/watch?v=NAtf3T9gG7s | The following tecs were used: TypeScript, React, Styled-components and Phosphor-react",
     url: "https://github.com/JhonatanGAlves/login-form",
-    createdAt: "2023-02-04T19:05:18Z",
+    productionUrl: "",
     tools: {
       TypeScript: {
         percentage: 96.2,
@@ -303,7 +303,7 @@ export const MY_PROJECTS: ProjectsTypes[] = [
     description:
       "Screen Dots is a small application that renders elements on the screen according to where they are clicked. The following tecs were used: TypeScript, React, Styled-components and Phosphor-react",
     url: "https://github.com/JhonatanGAlves/screen-dots",
-    createdAt: "2023-01-30T01:52:06Z",
+    productionUrl: "",
     tools: {
       TypeScript: {
         percentage: 93.0,

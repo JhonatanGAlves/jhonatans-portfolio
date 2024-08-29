@@ -1,3 +1,5 @@
+import { useContext } from "react";
+
 import {
   Badge,
   Box,
@@ -9,10 +11,11 @@ import {
   Link,
   Text,
 } from "@radix-ui/themes";
-import { FaAngleRight, FaCalendarAlt, FaNodeJs, FaReact } from "react-icons/fa";
-import moment from "moment";
+import { FaAngleRight, FaNodeJs, FaReact } from "react-icons/fa";
 
 import { useI18n } from "../../../hooks/useI18n";
+import { NextIcon } from "./NextIcon";
+import { PortfolioContext } from "../../../context/PortfolioContext";
 
 interface ProjectCardProps {
   project: ProjectsTypes;
@@ -20,7 +23,7 @@ interface ProjectCardProps {
 
 export const ProjectCard = ({ project }: ProjectCardProps) => {
   const { i18n, language } = useI18n();
-  moment.locale(language);
+  const { theme } = useContext(PortfolioContext);
 
   return (
     <Card size="2">
@@ -63,6 +66,8 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
                   >
                     {tool === "React" && <FaReact />}
                     {tool === "Node" && <FaNodeJs />}
+                    {tool === "Next" && <NextIcon />}
+
                     {tool}
                   </Badge>
                 );
@@ -110,20 +115,30 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
             </Grid>
           </Flex>
           <Flex align="center" justify="between">
-            <Flex align="center" justify="between" gap="2">
-              <FaCalendarAlt />
-              <Text as="span" size="1">
-                {moment(project.createdAt).format("LL")}
-              </Text>
-            </Flex>
             <Link href={project.url} target="_blank">
+              <Button
+                variant="outline"
+                color={theme === "dark" ? "yellow" : "purple"}
+                size="1"
+                radius="medium"
+                className={`w-full cursor-pointer`}
+              >
+                Github
+                <FaAngleRight />
+              </Button>
+            </Link>
+            <Link
+              hidden={!project.productionUrl}
+              href={project.productionUrl}
+              target="_blank"
+            >
               <Button
                 size="1"
                 radius="medium"
                 variant="solid"
                 className="font-semibold text-[var(--dark-gray-100)] dark:text-[var(--gray-100)] bg-[var(--detail)] dark:bg-[var(--dark-detail)] hover:opacity-75 transition-all cursor-pointer"
               >
-                {i18n("View")}
+                {i18n("Playground")}
                 <FaAngleRight />
               </Button>
             </Link>

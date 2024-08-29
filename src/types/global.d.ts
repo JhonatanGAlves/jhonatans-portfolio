@@ -3,7 +3,7 @@ interface ProjectsTypes {
   name: string;
   description: string;
   url: string;
-  createdAt: string;
+  productionUrl: string;
   tools: Record<string, { percentage: number; color: string }>;
   stack: "FRONTEND" | "BACKEND" | "FULLSTACK";
   mainTools: Record<
