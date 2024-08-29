@@ -30,7 +30,7 @@ export const SandwichMenu = ({
           icon={faBars}
         />
       </DropdownMenu.Trigger>
-      <DropdownMenu.Content className="absolute top-0 -right-[15px] w-44 p-4 rounded capitalize bg-[var(--gray-600)] dark:bg-[var(--dark-gray-800)] shadow-lg">
+      <DropdownMenu.Content className="absolute top-0 -right-[15px] w-52 p-4 rounded capitalize bg-[var(--gray-600)] dark:bg-[var(--dark-gray-800)] shadow-lg">
         {navBarItemsData.map((item, index) => (
           <Link
             key={index}

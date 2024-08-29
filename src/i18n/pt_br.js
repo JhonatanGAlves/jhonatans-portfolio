@@ -3,7 +3,7 @@ export const pt_br = {
     // header
     home: "Início",
     projects: "Projetos",
-    education: "Educação",
+    experiences: "Experiências",
     contact: "Contato",
     en: "in",
     dark: "Escuro",

@@ -136,7 +136,7 @@ export const Experiences = ({
           color={theme === "dark" ? "yellow" : "purple"}
           size="3"
           radius="medium"
-          className={`cursor-pointer`}
+          className={`cursor-pointer${isDesktopDevice ? "" : " py-8"}`}
           onClick={() => setIsShowingAllCredentials(true)}
         >
           <FaPlus /> {i18n("Show All Credentials")}
