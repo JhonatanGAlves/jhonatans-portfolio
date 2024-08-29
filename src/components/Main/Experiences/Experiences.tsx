@@ -139,7 +139,7 @@ export const Experiences = ({
           className={`cursor-pointer`}
           onClick={() => setIsShowingAllCredentials(true)}
         >
-          <FaPlus /> {i18n("Show More Credentials")}
+          <FaPlus /> {i18n("Show All Credentials")}
         </Button>
       </Flex>
     </Flex>

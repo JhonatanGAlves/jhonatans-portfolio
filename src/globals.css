@@ -29,6 +29,7 @@
   --php-color: #4f5d95;
   --react-color: #58c4dc;
   --node-color: #417e38;
+  --next-color: #828187;
 }
 
 @layer base {

@@ -6,7 +6,10 @@ interface ProjectsTypes {
   createdAt: string;
   tools: Record<string, { percentage: number; color: string }>;
   stack: "FRONTEND" | "BACKEND" | "FULLSTACK";
-  mainTools: Record<string, { color: string; borderColor: "cyan" | "green" }>;
+  mainTools: Record<
+    string,
+    { color: string; borderColor: "cyan" | "green" | "gray" }
+  >;
   image: string;
 }
 
