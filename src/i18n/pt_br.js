@@ -12,7 +12,7 @@ export const pt_br = {
     // hero
     "Hi, I am": "Olá, eu sou",
     "I'm a Full Stack Software Developer":
-      "Sou um Desenvolvedor de Software Full Stack",
+      "Sou Desenvolvedor de Software Full Stack",
     "My main experiences": "Minhas principais experiências",
     Download: "Baixar",
     year: "ano",
