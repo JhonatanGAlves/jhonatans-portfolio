@@ -37,7 +37,7 @@ export const ExperienceProgress = ({
           setWidthAfterTimeout(experienceAndWidth.progressBarValue);
         },
         index === 0 ? 500 : index === 1 ? 700 : index === 2 ? 900 : 1100
-      );
+      ) as unknown as number;
     }
 
     return () => {
