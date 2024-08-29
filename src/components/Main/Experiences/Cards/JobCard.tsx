@@ -29,7 +29,7 @@ export const JobCard = ({ job }: JobCardProps) => {
     return (
       (years ? `${years} ${i18n("year")}${years > 1 ? "s" : ""}` : "") +
       " " +
-      (months ? `${months} ${i18n("month")}${months > 1 ? "s" : ""}` : "")
+      (months ? `${months} ${i18n("month")}` : "")
     );
   }
 
@@ -46,7 +46,7 @@ export const JobCard = ({ job }: JobCardProps) => {
             align="center"
             className="text-[var(--detail)] dark:text-[var(--dark-detail)]"
           >
-            {`< ${job.role} />`}
+            {`< ${i18n(job.role)} />`}
           </Text>
           <Link
             href={job.site}
@@ -94,7 +94,7 @@ export const JobCard = ({ job }: JobCardProps) => {
             size="1"
             className="mt-2 text-[var(--gray-100)] dark:text-[var(--dark-gray-100)]"
           >
-            {job.description}
+            {i18n(job.description)}
           </Text>
         </Flex>
       </Flex>

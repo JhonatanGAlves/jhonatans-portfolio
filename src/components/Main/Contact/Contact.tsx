@@ -134,7 +134,7 @@ export const Contact = ({ modeDevice }: ContactProps) => {
         </Heading>
         <Text as="span" className="max-w-[34.375rem]" align="center">
           {i18n(
-            "You can send me a message through my social media or if you prefer, you can fill out the form below."
+            "You can send me a message through my socials media or if you prefer, you can fill out the form below."
           )}
         </Text>
         <Flex justify="center" p="4" gap="8px">

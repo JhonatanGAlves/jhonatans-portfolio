@@ -42,7 +42,11 @@ export const CourseCard = ({
         <Flex direction="column" gap="1">
           <Flex justify="between">
             <Text as="label" weight="bold" size="2">
-              {course.period}
+              {!onlyCertificateSection
+                ? course.period.includes("Present")
+                  ? `${course.period.split(" ")[0]} (${i18n("Present")})`
+                  : course.period
+                : `${i18n("Completed in")} ${course.period.split(" ")[2]}`}
             </Text>
             {onlyCertificateSection ? (
               <FaCheckCircle />

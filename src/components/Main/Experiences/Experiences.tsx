@@ -64,7 +64,7 @@ export const Experiences = ({
           size="8"
           className="text-[var(--detail)] dark:text-[var(--dark-detail)]"
         >
-          {i18n("Experience & Education")}
+          {i18n("Experiences & Education")}
         </Heading>
         <Text as="span" className="max-w-[34.375rem]" align="center">
           {i18n(
