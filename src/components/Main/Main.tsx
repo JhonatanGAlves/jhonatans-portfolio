@@ -1,6 +1,6 @@
 import { Box } from "@radix-ui/themes";
 
-import { Experiences, Hero, Projects } from "./index";
+import { Contact, Experiences, Hero, Projects } from "./index";
 
 interface MainProps {
   scrollPosition: number;
@@ -13,6 +13,7 @@ export const Main = ({ scrollPosition, modeDevice }: MainProps) => {
       <Hero scrollPosition={scrollPosition} modeDevice={modeDevice} />
       <Projects />
       <Experiences modeDevice={modeDevice} />
+      <Contact modeDevice={modeDevice} />
     </Box>
   );
 };

@@ -47,7 +47,7 @@ export const NavBar = ({ scrollPosition, navBarItemsData }: NavBarProps) => {
               <Text
                 className={`py-0.5 px-2 ${getColorOfSelectedItem(
                   item.name
-                )} rounded z-10`}
+                )} rounded z-10 capitalize`}
                 as="span"
               >
                 {i18n(item.name)}

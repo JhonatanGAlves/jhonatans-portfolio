@@ -79,7 +79,15 @@ export const CourseCard = ({
             {i18n(course.courseName)}
           </Text>
         </Flex>
-        <Flex justify={onlyCertificateSection ? "between" : "center"}>
+        <Flex
+          justify={
+            onlyCertificateSection
+              ? "between"
+              : isDesktopDevice
+              ? "start"
+              : "center"
+          }
+        >
           <Text
             as="label"
             size="2"
