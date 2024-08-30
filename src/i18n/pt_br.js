@@ -5,7 +5,6 @@ export const pt_br = {
     projects: "Projetos",
     experiences: "Experiências",
     contact: "Contato",
-    en: "in",
     dark: "Escuro",
     light: "Claro",
 
