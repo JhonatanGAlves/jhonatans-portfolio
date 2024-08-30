@@ -43,8 +43,8 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
             <Text as="span" size="5" weight="bold">
               {project.name}
             </Text>
-            <Text as="p" size="1" truncate title={project.description}>
-              {project.description}
+            <Text as="p" size="1" truncate title={i18n(project.description)}>
+              {i18n(project.description)}
             </Text>
           </Flex>
         </Flex>

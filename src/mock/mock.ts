@@ -25,24 +25,25 @@ export const MY_PROJECTS: ProjectsTypes[] = [
   {
     id: 1,
     name: "Jhonatan's Portfolio",
-    description: "Description",
+    description:
+      "Personal portfolio website showcasing my projects, professional experience, and certifications. Built with modern web technologies to demonstrate my skills as a full stack developer.",
     url: "https://github.com/JhonatanGAlves/jhonatans-portfolio",
     productionUrl: "https://jhonatandev-alves-app.vercel.app/",
     tools: {
       TypeScript: {
-        percentage: 95.0,
+        percentage: 91.6,
         color: TOOL_COLOR_PALETTE.TypeScript,
       },
       HTML: {
-        percentage: 1.1,
+        percentage: 0.9,
         color: TOOL_COLOR_PALETTE.HTML,
       },
       JavaScript: {
-        percentage: 2.4,
+        percentage: 6.2,
         color: TOOL_COLOR_PALETTE.JavaScript,
       },
       CSS: {
-        percentage: 1.5,
+        percentage: 1.3,
         color: TOOL_COLOR_PALETTE.CSS,
       },
     },
@@ -58,7 +59,8 @@ export const MY_PROJECTS: ProjectsTypes[] = [
   {
     id: 2,
     name: "Phone Book App",
-    description: "A FullStack App.",
+    description:
+      "Phone Book App is a full-stack application designed to manage and store contact information. This project is built with modern web technologies and follows best practices for a scalable and maintainable codebase.",
     url: "https://github.com/JhonatanGAlves/phone-book-app",
     productionUrl: "",
     tools: {
@@ -95,7 +97,8 @@ export const MY_PROJECTS: ProjectsTypes[] = [
   {
     id: 3,
     name: "Coffee Delivery",
-    description: "Description",
+    description:
+      "Project made through the Ignite course on the Rocketseat platform. Project carried out as the 2nd challenge to reinforce important ReactJS concepts.",
     url: "https://github.com/JhonatanGAlves/coffee-delivery",
     productionUrl: "https://coffee-delivery-rose.vercel.app/",
     tools: {
@@ -128,7 +131,8 @@ export const MY_PROJECTS: ProjectsTypes[] = [
   {
     id: 4,
     name: "Capputeeno E-commerce",
-    description: "Description",
+    description:
+      "Capputeeno Ecommerce is an online store for coffee-related products, such as mugs and t-shirts. Features include adding and removing items from the cart, and a smooth checkout process.",
     url: "https://github.com/JhonatanGAlves/capputeeno-e-commerce",
     productionUrl: "",
     tools: {
@@ -163,7 +167,7 @@ export const MY_PROJECTS: ProjectsTypes[] = [
     name: "Dtmoney Financial Control",
     description:
       "This is a financial control application built on the Ignite course by @Rocketseat using the following tecs: React, TypeScript, miragejs for fake API, axios for requesting API and Styled Components for CSS in JS.",
-    url: "https://github.com/JhonatanGAlves/dtmoney-financial-control",
+    url: "https://github.com/JhonatanGAlves/dt-money",
     productionUrl: "",
     tools: {
       TypeScript: {
@@ -187,7 +191,8 @@ export const MY_PROJECTS: ProjectsTypes[] = [
   {
     id: 6,
     name: "Todo List",
-    description: "Description",
+    description:
+      "A simple front-end to-do list application for managing tasks efficiently. Built with modern web technologies to provide a clean and intuitive user experience.",
     url: "https://github.com/JhonatanGAlves/todo-list",
     productionUrl: "https://todo-list-seven-hazel.vercel.app/",
     tools: {
@@ -220,7 +225,8 @@ export const MY_PROJECTS: ProjectsTypes[] = [
   {
     id: 7,
     name: "Github Tasks Blog",
-    description: "Description",
+    description:
+      "A web application that fetches GitHub profile information and displays user tasks as blog posts.",
     url: "https://github.com/JhonatanGAlves/github-tasks-blog",
     productionUrl: "https://github-tasks-blog.vercel.app/",
     tools: {
@@ -249,9 +255,10 @@ export const MY_PROJECTS: ProjectsTypes[] = [
   {
     id: 8,
     name: "Form Progress Bar",
-    description: "Description",
+    description:
+      "A simple form where each filled field contributes to a dynamic progress bar. This interactive UI element provides visual feedback as users complete form fields.",
     url: "https://github.com/JhonatanGAlves/form-with-progress-bar",
-    productionUrl: "",
+    productionUrl: "https://form-with-progress-bar-eight.vercel.app/",
     tools: {
       TypeScript: {
         percentage: 96.7,
@@ -275,9 +282,9 @@ export const MY_PROJECTS: ProjectsTypes[] = [
     id: 9,
     name: "Login Form",
     description:
-      "Login Form is a small application that simulates a login system that triggers a Promise function simulating a request. I came across a video on Youtube that contained this challenge -> https://www.youtube.com/watch?v=NAtf3T9gG7s | The following tecs were used: TypeScript, React, Styled-components and Phosphor-react",
+      "Login Form is a small application that simulates a login system that triggers a Promise function simulating a request. I came across a video on Youtube that contained this challenge -> https://www.youtube.com/watch?v=NAtf3T9gG7s",
     url: "https://github.com/JhonatanGAlves/login-form",
-    productionUrl: "",
+    productionUrl: "login-form-alves-app.vercel.app",
     tools: {
       TypeScript: {
         percentage: 96.2,
@@ -301,7 +308,7 @@ export const MY_PROJECTS: ProjectsTypes[] = [
     id: 10,
     name: "Screen Dots",
     description:
-      "Screen Dots is a small application that renders elements on the screen according to where they are clicked. The following tecs were used: TypeScript, React, Styled-components and Phosphor-react",
+      "Screen Dots is a small application that renders elements on the screen according to where they are clicked, allowing you to undo and redo steps. The following technologies were used: TypeScript, React, Styled-components and Phosphor-react",
     url: "https://github.com/JhonatanGAlves/screen-dots",
     productionUrl: "",
     tools: {
