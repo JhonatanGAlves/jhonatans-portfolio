@@ -77,5 +77,7 @@ export const pt_br = {
       "Login Form é um pequeno aplicativo que simula um sistema de login que dispara uma função Promise simulando uma requisição. Eu me deparei com um vídeo no Youtube que continha esse desafio -> https://www.youtube.com/watch?v=NAtf3T9gG7s",
     "Screen Dots is a small application that renders elements on the screen according to where they are clicked, allowing you to undo and redo steps. The following technologies were used: TypeScript, React, Styled-components and Phosphor-react":
       "Screen Dots é um pequeno aplicativo que renderiza elementos na tela de acordo com onde eles são clicados, sendo possivel disfazer e refazer etapas. As seguintes tecnologias foram usadas: TypeScript, React, Styled-components e Phosphor-react",
+    "A React-based geolocation application utilizing the Leaflet library. Users can click on the map to add pins, each representing a location. Clicking on a pin opens a Bootstrap 5 modal displaying detailed information about the pin's latitude and longitude, including its address.":
+      "Um aplicativo de geolocalização baseado em React que utiliza a biblioteca Leaflet. Os usuários podem clicar no mapa para adicionar pins, cada um representando um local. Clicar em um pin abre um modal Bootstrap 5 exibindo informações detalhadas sobre a latitude e longitude do pin, incluindo seu endereço.",
   },
 };

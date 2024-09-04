@@ -6,6 +6,7 @@ import todoList from "../assets/projectThumbnails/todo-list.png";
 import githubTasksBlog from "../assets/projectThumbnails/github-blog.png";
 import dtMoney from "../assets/projectThumbnails/dt-money.png";
 import formProgress from "../assets/projectThumbnails/form-progess-bar.png";
+import geolocationApp from "../assets/projectThumbnails/geolocation-app.png";
 import loginForm from "../assets/projectThumbnails/login-form.png";
 import screenDots from "../assets/projectThumbnails/screen-dots.png";
 
@@ -280,6 +281,40 @@ export const MY_PROJECTS: ProjectsTypes[] = [
   },
   {
     id: 9,
+    name: "Geolocation App",
+    description:
+      "A React-based geolocation application utilizing the Leaflet library. Users can click on the map to add pins, each representing a location. Clicking on a pin opens a Bootstrap 5 modal displaying detailed information about the pin's latitude and longitude, including its address.",
+    url: "https://github.com/JhonatanGAlves/geolocation-app",
+    productionUrl: "https://geolocation-app-nine.vercel.app/",
+    tools: {
+      TypeScript: {
+        percentage: 76.7,
+        color: TOOL_COLOR_PALETTE.TypeScript,
+      },
+      HTML: {
+        percentage: 9.6,
+        color: TOOL_COLOR_PALETTE.HTML,
+      },
+      JavaScript: {
+        percentage: 12.9,
+        color: TOOL_COLOR_PALETTE.JavaScript,
+      },
+      CSS: {
+        percentage: 0.8,
+        color: TOOL_COLOR_PALETTE.CSS,
+      },
+    },
+    stack: "FRONTEND",
+    mainTools: {
+      React: {
+        color: TOOL_COLOR_PALETTE.React,
+        borderColor: "cyan",
+      },
+    },
+    image: geolocationApp,
+  },
+  {
+    id: 10,
     name: "Login Form",
     description:
       "Login Form is a small application that simulates a login system that triggers a Promise function simulating a request. I came across a video on Youtube that contained this challenge -> https://www.youtube.com/watch?v=NAtf3T9gG7s",
@@ -305,7 +340,7 @@ export const MY_PROJECTS: ProjectsTypes[] = [
     image: loginForm,
   },
   {
-    id: 10,
+    id: 11,
     name: "Screen Dots",
     description:
       "Screen Dots is a small application that renders elements on the screen according to where they are clicked, allowing you to undo and redo steps. The following technologies were used: TypeScript, React, Styled-components and Phosphor-react",
